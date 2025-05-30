@@ -1,0 +1,18 @@
+#main {
+    margin: 100px 50px;
+}
+
+.future {
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+}
+
+.future h3 {
+    margin-top: 10px;
+}
+
+.logo-method {
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 10px;
+}

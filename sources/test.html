@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Quản Lý</title>
+    <link rel="stylesheet" href="./css/test.css">
+    <!-- Font Awesome cho các biểu tượng -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header sẽ được bạn thêm vào -->
+
+    <div class="admin-container">
+        <!-- Sidebar với các tab -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>Quản Lý Hệ Thống</h3>
+            </div>
+
+            <ul class="sidebar-menu">
+                <li class="sidebar-item active" data-tab="dashboard">
+                    <i class="fas fa-tachometer-alt"></i> Tổng quan
+                </li>
+                <li class="sidebar-item" data-tab="products">
+                    <i class="fas fa-box"></i> Sản phẩm
+                </li>
+                <li class="sidebar-item" data-tab="categories">
+                    <i class="fas fa-tags"></i> Danh mục
+                </li>
+                <li class="sidebar-item" data-tab="orders">
+                    <i class="fas fa-shopping-cart"></i> Đơn hàng
+                </li>
+                <li class="sidebar-item" data-tab="customers">
+                    <i class="fas fa-users"></i> Khách hàng
+                </li>
+                <li class="sidebar-item" data-tab="reports">
+                    <i class="fas fa-chart-bar"></i> Báo cáo
+                </li>
+                <li class="sidebar-item" data-tab="settings">
+                    <i class="fas fa-cog"></i> Cài đặt
+                </li>
+            </ul>
+        </div>
+
+        <!-- Phần nội dung chính -->
+        <div class="content">
+            <!-- Tab Tổng quan -->
+            <div class="tab-content active" id="dashboard">
+                <div class="content-header">
+                    <h2>Tổng quan</h2>
+                </div>
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Sản phẩm</h3>
+                            <p>120</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Đơn hàng</h3>
+                            <p>45</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Khách hàng</h3>
+                            <p>230</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Doanh thu</h3>
+                            <p>25.5M đ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h3>Hoạt động gần đây</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p><strong>Đơn hàng mới</strong> từ Nguyễn Văn A</p>
+                                <span>15 phút trước</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p><strong>Khách hàng mới</strong> đăng ký: Trần Thị B</p>
+                                <span>1 giờ trước</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-box"></i>
+                            </div>
+                            <div class="activity-details">
+                                <p><strong>Sản phẩm mới</strong> được thêm: Áo thun nam</p>
+                                <span>3 giờ trước</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Sản phẩm -->
+            <div class="tab-content" id="products">
+                <div class="content-header">
+                    <h2>Quản lý sản phẩm</h2>
+                    <button class="btn-primary"><i class="fas fa-plus"></i> Thêm sản phẩm</button>
+                </div>
+
+                <div class="search-filter">
+                    <div class="search-box">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="filter-options">
+                        <select>
+                            <option value="">Tất cả danh mục</option>
+                            <option value="1">Áo</option>
+                            <option value="2">Quần</option>
+                            <option value="3">Giày</option>
+                        </select>
+                        <select>
+                            <option value="">Sắp xếp theo</option>
+                            <option value="name">Tên</option>
+                            <option value="price">Giá</option>
+                            <option value="date">Ngày tạo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Hình ảnh</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Danh mục</th>
+                                <th>Giá</th>
+                                <th>Tồn kho</th>
+                                <th>Trạng thái</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><img src="https://via.placeholder.com/50" alt="Sản phẩm"></td>
+                                <td>Áo thun nam</td>
+                                <td>Áo</td>
+                                <td>250,000 đ</td>
+                                <td>45</td>
+                                <td><span class="status-active">Còn hàng</span></td>
+                                <td>
+                                    <button class="btn-icon btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><img src="https://via.placeholder.com/50" alt="Sản phẩm"></td>
+                                <td>Quần jean nam</td>
+                                <td>Quần</td>
+                                <td>450,000 đ</td>
+                                <td>30</td>
+                                <td><span class="status-active">Còn hàng</span></td>
+                                <td>
+                                    <button class="btn-icon btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><img src="https://via.placeholder.com/50" alt="Sản phẩm"></td>
+                                <td>Giày thể thao</td>
+                                <td>Giày</td>
+                                <td>650,000 đ</td>
+                                <td>0</td>
+                                <td><span class="status-inactive">Hết hàng</span></td>
+                                <td>
+                                    <button class="btn-icon btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <button class="pagination-btn"><i class="fas fa-angle-left"></i></button>
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn">3</button>
+                    <button class="pagination-btn"><i class="fas fa-angle-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Tab Danh mục -->
+            <div class="tab-content" id="categories">
+                <div class="content-header">
+                    <h2>Quản lý danh mục</h2>
+                    <button class="btn-primary"><i class="fas fa-plus"></i> Thêm danh mục</button>
+                </div>
+
+                <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tên danh mục</th>
+                                <th>Mô tả</th>
+                                <th>Số sản phẩm</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Áo</td>
+                                <td>Các loại áo nam, nữ</td>
+                                <td>45</td>
+                                <td>
+                                    <button class="btn-icon btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Quần</td>
+                                <td>Các loại quần nam, nữ</td>
+                                <td>30</td>
+                                <td>
+                                    <button class="btn-icon btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Giày</td>
+                                <td>Các loại giày thể thao, giày công sở</td>
+                                <td>25</td>
+                                <td>
+                                    <button class="btn-icon btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Các tab khác tương tự -->
+            <div class="tab-content" id="orders">
+                <div class="content-header">
+                    <h2>Quản lý đơn hàng</h2>
+                </div>
+                <p>Nội dung quản lý đơn hàng sẽ hiển thị ở đây...</p>
+            </div>
+
+            <div class="tab-content" id="customers">
+                <div class="content-header">
+                    <h2>Quản lý khách hàng</h2>
+                </div>
+                <p>Nội dung quản lý khách hàng sẽ hiển thị ở đây...</p>
+            </div>
+
+            <div class="tab-content" id="reports">
+                <div class="content-header">
+                    <h2>Báo cáo</h2>
+                </div>
+                <p>Nội dung báo cáo sẽ hiển thị ở đây...</p>
+            </div>
+
+            <div class="tab-content" id="settings">
+                <div class="content-header">
+                    <h2>Cài đặt hệ thống</h2>
+                </div>
+                <p>Nội dung cài đặt sẽ hiển thị ở đây...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/test.js"></script>
+</body>
+
+</html>

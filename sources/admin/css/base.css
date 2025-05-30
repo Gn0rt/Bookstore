@@ -1,0 +1,143 @@
+body {
+    overflow-x: hidden;
+}
+
+/* Header */
+#header {
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 0 5px 5px 2px #ccc;
+}
+
+.header__logo {
+    margin-left: 20px;
+}
+
+.header__logo img {
+    height: 100px;
+    border-radius: 50%;
+}
+
+
+.user {
+    font-size: 26px;
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 80px;
+}
+
+.user::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 26%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid black;
+    display: none;
+}
+
+.user__options {
+    list-style: none;
+    background-color: #fff;
+    position: absolute;
+    left: -100%;
+    top: 100%;
+    width: 150px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    box-shadow: 0 10px 5px #ccc;
+    display: none;
+
+}
+
+
+
+.user:hover::before,
+.user:hover .user__options {
+    display: block;
+
+}
+
+.option:hover {
+    background-color: #ccc;
+}
+
+.option a {
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    margin-left: 10px;
+
+}
+
+#main {
+    margin: 100px 50px;
+}
+
+.main__content {
+    padding: 0;
+}
+
+.backToHome {
+    margin-bottom: 20px;
+}
+
+.product__add,
+.product__btn,
+.category__btn {
+    display: flex;
+    justify-content: end;
+    margin-top: 30px;
+}
+
+.product__btn button,
+.product__btn a,
+.category__btn a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.product__add button {
+    color: #fff
+}
+
+.product__image img {
+    height: 100px;
+}
+
+.truncate {
+    white-space: nowrap;
+    /* Ngăn nội dung xuống dòng */
+    overflow: hidden;
+    /* Ẩn nội dung vượt quá giới hạn */
+    text-overflow: ellipsis;
+    /* Hiển thị dấu ba chấm (...) */
+    max-width: 200px;
+    /* Giới hạn chiều rộng tối đa */
+}
+
+.form__search {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 20px;
+
+}
+
+.form__search input {
+    padding: 5px;
+    margin-right: 10px;
+    width: 500px;
+}
+
+.filter_type {
+    margin: 10px 0;
+}

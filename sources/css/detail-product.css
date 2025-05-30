@@ -1,0 +1,34 @@
+/* Main */
+#main {
+    margin: 100px 50px;
+}
+
+.main__image img {
+    height: 500px;
+}
+
+.main__product {
+    /* #0dcaf0 */
+    border: 1px solid #0dcaf0;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 70px;
+}
+
+.main__product button {
+    display: block;
+    /* width: 100%; */
+    color: #000;
+}
+
+.main__btn-buy,
+.main__btn-add {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.main__desc h3 {
+    margin-top: 20px;
+}
+
+/* End: Main */

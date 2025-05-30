@@ -1,0 +1,15 @@
+/* Main */
+#main {
+    margin: 100px 50px;
+}
+
+.cart__btn-buy {
+    margin: 50px;
+    display: flex;
+    justify-content: end;
+
+}
+
+/* End: Main */
+
+/* Footer */
